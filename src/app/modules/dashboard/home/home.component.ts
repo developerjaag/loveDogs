@@ -23,11 +23,24 @@ export class HomeComponent implements OnInit {
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,agendaWeek,agendaDay,listMonth'
-      }
+        right: 'month,agendaWeek,agendaDay,listMonth',
+      },
+      buttonText: {
+        today:    'Hoy',
+        month:    'Mes',
+        week:     'Semana',
+        day:      'Día',
+        list:     'Lista'
+      },
+      height: 600,
+      locale: 'es',
     };
 
 
+  } // end ngOnInit
+
+  createEvent() {
+    console.log('creating event');
   }
 
 }

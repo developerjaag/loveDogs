@@ -1,3 +1,4 @@
-<div *ngIf="calendarOptions">
+<div *ngIf="calendarOptions" class="calendar-container">
     <ng-fullcalendar #ucCalendar [options]="calendarOptions"></ng-fullcalendar>
 </div>
+<div class="fab" (click)="createEvent()"> + </div>
