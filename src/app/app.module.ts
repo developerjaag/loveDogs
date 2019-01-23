@@ -1,12 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // firebase
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { AngularFirestore } from '@angular/fire/firestore';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 import { LoginComponent } from './modules/auth/login/login.component';
 import { NewOwnerComponent } from './modules/owners/new-owner/new-owner.component';
 import { NewPetComponent } from './modules/pets/new-pet/new-pet.component';
@@ -39,9 +46,15 @@ import { FooterComponent } from './modules/shared/footer/footer.component';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+
   ],
-  providers: [],
+  providers: [
+    AngularFireAuth,
+    AngularFirestore,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

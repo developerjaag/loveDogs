@@ -1,0 +1,14 @@
+.img_back_container {
+    position: absolute;
+    top: 1rem;
+    left: 10rem;
+    z-index: -1;
+    opacity: 0.6;
+    width: 80%
+}
+
+.login_container {
+    width: 30rem;
+    margin-right: 20rem;
+    margin-top: 10rem;
+}

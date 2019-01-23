@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'calendar', component: CalendarComponent },
   { path: 'home', component: HomeComponent },
 
-  { path: '', component: IndexComponent },
+  { path: '', component: LoginComponent },
 
   { path: 'owners', component: ListOwnersComponent },
   { path: 'new-owner', component: NewOwnerComponent },
