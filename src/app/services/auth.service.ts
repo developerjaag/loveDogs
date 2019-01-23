@@ -23,7 +23,6 @@ export class AuthService {
     const me = this;
     this.afAuth.authState.subscribe((fbUser: firebase.User) => {
       if (fbUser) {
-        // se verifica si el usuario es primera vez que ingresa (para crear estructura en BD)
         const usuariosRef = me.afs.firestore
           .collection('Users')
           .doc(fbUser.uid);
@@ -41,7 +40,9 @@ export class AuthService {
               );
             }
           })
-          .catch(function() {});
+          .catch(function(error) {
+            console.log('catch ' + error);
+          });
       }
     });
   } // end ionitAuthListener

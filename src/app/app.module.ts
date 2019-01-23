@@ -13,6 +13,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { FullCalendarModule } from 'ng-fullcalendar';
+
+
 
 import { LoginComponent } from './modules/auth/login/login.component';
 import { NewOwnerComponent } from './modules/owners/new-owner/new-owner.component';
@@ -49,6 +52,7 @@ import { FooterComponent } from './modules/shared/footer/footer.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    FullCalendarModule
 
   ],
   providers: [

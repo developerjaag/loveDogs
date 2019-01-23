@@ -31,12 +31,11 @@ export class MessagesService {
     if (!mensaje) {
       mensaje = 'Un momento por favor...';
     }
-    const svg = Math.floor(Math.random() * 5 + 1);
     swal.fire({
       html: `
           <h2 class='center'>${mensaje}</h2>
           <div >
-          <i class="fas fa-paw"></i>
+             <img src='assets/loading.svg' alt=''>
           </div>
       `,
       showCloseButton: false,
