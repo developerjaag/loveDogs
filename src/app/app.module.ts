@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FullCalendarModule } from 'ng-fullcalendar';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 
@@ -52,12 +54,14 @@ import { FooterComponent } from './modules/shared/footer/footer.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    FullCalendarModule
+    FullCalendarModule,
+    NgbModule
 
   ],
   providers: [
     AngularFireAuth,
     AngularFirestore,
+    { provide: LOCALE_ID, useValue: 'es-CO' }
   ],
   bootstrap: [AppComponent]
 })
